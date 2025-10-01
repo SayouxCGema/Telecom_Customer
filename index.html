@@ -1,50 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NECEN | Ozone Generators</title>
-    <meta name="description" content="Domestic ozone generators exclusively manufactured in Spain. Lifetime warranty and full parts availability. Store open to the public since 2003.">
+    <title>NECEN | Generadores de Ozono</title>
+    <meta name="description" content="Generadores de ozono domésticos fabricados exclusivamente en España. Garantía de por vida y disponibilidad total de piezas. Tienda abierta al público desde 2003.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+    <script src="/script.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <div class="branding">
-                <img class="logo" src="https://www.necen.es/wp-content/uploads/2020/07/cropped-NECEN-LOGO-1.png" alt="NECEN logo" loading="lazy">
+                <img class="logo" src="https://www.necen.es/wp-content/uploads/2020/07/cropped-NECEN-LOGO-1.png" alt="Logo de NECEN" loading="lazy">
                 <span class="brand-name">NECEN</span>
             </div>
             <nav class="nav">
-                <a href="#products">Products</a>
-                <a href="#about">About</a>
-                <a href="#contact" class="btn btn--ghost">Contact</a>
+                <a href="#products">Productos</a>
+                <a href="#about">Sobre nosotros</a>
+                <a href="#contact" class="btn btn--ghost">Contacto</a>
+                <a href="#" id="export-pdf" class="btn btn--secondary" aria-label="Descargar propuesta en PDF">Descargar PDF</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero" aria-label="NECEN confidence background">
-            <div class="hero-bg" role="img" aria-label="Background inspired by NECEN imagery"></div>
+    <main id="proposal">
+        <section class="hero" aria-label="Fondo de confianza de NECEN">
+            <div class="hero-bg" role="img" aria-label="Fondo inspirado en imágenes de NECEN"></div>
             <div class="container hero-content">
-                <div class="badge">Store open to the public since 2003</div>
-                <h1 class="headline">Domestic Ozone Generators</h1>
-                <p class="subhead">Exclusively manufactured in Spain. Lifetime warranty. Full parts availability.</p>
+                <div class="badge">Tienda abierta al público desde 2003</div>
+                <h1 class="headline">Generadores de ozono domésticos</h1>
+                <p class="subhead">Fabricados exclusivamente en España. Garantía de por vida. Disponibilidad total de piezas.</p>
                 <ul class="keypoints">
-                    <li>Domestic ozone generators</li>
-                    <li>Exclusively manufactured in Spain</li>
-                    <li>We have all the parts available</li>
-                    <li>Lifetime warranty</li>
+                    <li>Generadores de ozono domésticos</li>
+                    <li>Fabricados exclusivamente en España</li>
+                    <li>Disponemos de todas las piezas de repuesto</li>
+                    <li>Garantía de por vida</li>
                 </ul>
                 <div class="cta">
-                    <a class="btn btn--primary" href="#products">View Products</a>
-                    <a class="btn btn--secondary" href="#contact">Request a Quote</a>
+                    <a class="btn btn--primary" href="#products">Ver productos</a>
+                    <a class="btn btn--secondary" href="#contact">Solicitar presupuesto</a>
                 </div>
                 <div class="trust">
-                    <img src="https://www.necen.es/wp-content/uploads/2020/07/cropped-NECEN-LOGO-1.png" alt="NECEN mark" loading="lazy">
-                    <span>Built by NECEN in Spain</span>
+                    <img src="https://www.necen.es/wp-content/uploads/2020/07/cropped-NECEN-LOGO-1.png" alt="Sello de NECEN" loading="lazy">
+                    <span>Fabricado por NECEN en España</span>
                 </div>
             </div>
             <svg class="hero-wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
@@ -54,22 +57,22 @@
 
         <section id="products" class="products">
             <div class="container">
-                <h2>Featured Products</h2>
+                <h2>Productos destacados</h2>
                 <div class="grid">
                     <article class="card">
                         <h3>Ozone Home 200</h3>
-                        <p>Compact domestic unit for kitchens and bathrooms. Silent and efficient.</p>
-                        <a href="#" class="link">Learn more</a>
+                        <p>Unidad doméstica compacta para cocinas y baños. Silenciosa y eficiente.</p>
+                        <a href="#" class="link">Ver detalles</a>
                     </article>
                     <article class="card">
                         <h3>Ozone Home 400</h3>
-                        <p>Powerful household purifier for large rooms and open spaces.</p>
-                        <a href="#" class="link">Learn more</a>
+                        <p>Purificador doméstico potente para estancias grandes y espacios abiertos.</p>
+                        <a href="#" class="link">Ver detalles</a>
                     </article>
                     <article class="card">
                         <h3>Ozone Pro Mini</h3>
-                        <p>Portable treatment device for quick disinfection tasks.</p>
-                        <a href="#" class="link">Learn more</a>
+                        <p>Dispositivo portátil para tareas rápidas de desinfección.</p>
+                        <a href="#" class="link">Ver detalles</a>
                     </article>
                 </div>
             </div>
@@ -78,12 +81,12 @@
         <section id="about" class="about">
             <div class="container about-grid">
                 <div class="about-text">
-                    <h2>Exclusively manufactured in Spain</h2>
-                    <p>We design and assemble every generator in our Spanish facilities, ensuring top-tier quality and compliance with EU standards. Our service center carries all spare parts, so your device can be maintained for life.</p>
+                    <h2>Fabricados exclusivamente en España</h2>
+                    <p>Diseñamos y ensamblamos cada generador en nuestras instalaciones en España, garantizando la máxima calidad y el cumplimiento de las normativas europeas. Nuestro servicio técnico dispone de todas las piezas para que su equipo pueda mantenerse de por vida.</p>
                     <ul class="checks">
-                        <li>All parts available</li>
-                        <li>Lifetime warranty</li>
-                        <li>Expert after‑sales support</li>
+                        <li>Todas las piezas disponibles</li>
+                        <li>Garantía de por vida</li>
+                        <li>Soporte postventa experto</li>
                     </ul>
                 </div>
                 <div class="about-media">
@@ -94,15 +97,15 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Contact</h2>
-                <p>Visit our store open to the public since 2003, or send us a message and we’ll get back to you.</p>
+                <h2>Contacto</h2>
+                <p>Visítenos en nuestra tienda abierta al público desde 2003 o envíenos un mensaje y le responderemos a la mayor brevedad.</p>
                 <form class="contact-form" action="#" method="post" onsubmit="return false;">
                     <div class="row">
-                        <input type="text" name="name" placeholder="Your name" required>
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
                     </div>
-                    <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
-                    <button class="btn btn--primary" type="submit">Send</button>
+                    <textarea name="message" placeholder="¿Cómo podemos ayudarle?" rows="5" required></textarea>
+                    <button class="btn btn--primary" type="submit">Enviar</button>
                 </form>
             </div>
         </section>
@@ -110,10 +113,10 @@
 
     <footer class="site-footer">
         <div class="container">
-            <span>© 2003‑2025 NECEN. All rights reserved.</span>
+            <span>© 2003‑2025 NECEN. Todos los derechos reservados.</span>
             <nav>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
             </nav>
         </div>
     </footer>

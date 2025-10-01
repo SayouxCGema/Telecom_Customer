@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', function () {
+  var exportBtn = document.getElementById('export-pdf');
+  if (!exportBtn) return;
+
+  exportBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var source = document.getElementById('proposal');
+    if (!source) return;
+
+    var opt = {
+      margin:       [10, 10, 10, 10],
+      filename:     'Propuesta-Rediseño-maquinasdeozono.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2, useCORS: true, letterRendering: true, backgroundColor: '#ffffff' },
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Generate PDF
+    html2pdf().from(source).set(opt).save();
+  });
+});
+
