@@ -1,0 +1,25 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "![Telecome](https://github.com/SayouxCGema/Telecom_Customer/blob/191f5f00d7a255c47d879436b50088e9b5aa5855/telecome.jpg) - Este conjunto de datos contiene información detallada sobre los clientes de una empresa de telecomunicaciones, incluidos datos demográficos, suscripciones a servicios, información de facturación y estado de rotación. Recoge aspectos clave como si un cliente tiene servicios telefónicos o de Internet, su permanencia en la empresa, el uso de servicios adicionales como la seguridad en línea y los métodos de pago elegidos.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pdf": "node pdf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SayouxCGema/Telecom_Customer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SayouxCGema/Telecom_Customer/issues"
+  },
+  "homepage": "https://github.com/SayouxCGema/Telecom_Customer#readme",
+  "devDependencies": {
+    "express": "^5.1.0",
+    "puppeteer": "^24.22.3"
+  }
+}

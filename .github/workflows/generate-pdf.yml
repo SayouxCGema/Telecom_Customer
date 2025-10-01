@@ -1,0 +1,29 @@
+name: Generate proposal PDF into docs
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: |
+          npm ci || npm i
+      - name: Generate PDF
+        run: node pdf.js
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: propuesta_maquinasdeozono_pdf
+          path: docs/propuesta_maquinasdeozono.pdf
+      - name: Commit PDF to docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/propuesta_maquinasdeozono.pdf
+          git commit -m "chore: update propuesta PDF" || echo "No changes to commit"
+          git push
