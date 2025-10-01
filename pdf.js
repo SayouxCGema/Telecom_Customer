@@ -13,7 +13,8 @@ async function startServer(staticDir, port) {
 
 (async () => {
   const port = 5051;
-  const server = await startServer(__dirname, port);
+  const staticDir = path.resolve(__dirname, 'docs');
+  const server = await startServer(staticDir, port);
   const url = `http://localhost:${port}/index.html`;
 
   const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
@@ -22,7 +23,7 @@ async function startServer(staticDir, port) {
   await page.goto(url, { waitUntil: 'networkidle2' });
   await page.emulateMediaType('screen');
 
-  const outputPath = path.resolve(__dirname, 'propuesta_maquinasdeozono.pdf');
+  const outputPath = path.resolve(__dirname, 'docs', 'propuesta_maquinasdeozono.pdf');
   await page.pdf({
     path: outputPath,
     format: 'A4',
